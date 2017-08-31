@@ -213,11 +213,10 @@ var allUsers = ["Tom", "Dick", "Harry", "Anne", "Quinton", "Katie", "Mary"];
 
 function findPotentialFriends(existingFriends) {
   return function(user){
-    for(var i = 0; i < friends.length; i++){
-      if(friends[i].includes(user)){
+    if(existingFriends.includes(user)){
         return false;
-      }
-    } return true;
+    }
+    return true;
   };
 }
 
@@ -273,10 +272,7 @@ to 5. What we need to do is console.log(i) so that it logs like so:
    }
  }
 
- timeOutCounter();
-
-
-console.log(timeOutCounter());
+timeOutCounter()
 
 // function timeOutCounter() {
 //   for (var i = 0; i <= 5; i++) {
